@@ -186,6 +186,12 @@
     <!-- End Google Tag Manager -->
 
     <style>
+        .home__background-video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+
+        }
         html.has-scroll-smooth {
             overflow: hidden;
             backface-visibility: hidden;
@@ -317,7 +323,7 @@
         <div class="reset_loco"></div>
         <div class="content">
             <div data-w-id="086aac7e-dd74-2f90-c765-4f0f826985c9" class="section is--hero">
-                <div class="c--content w-container">
+                <div class="c--content w-container">              
                     <div class="w-layout-grid grid--hero">
                         <div id="w-node-_5331e4b9-1bb2-e1f6-1329-b403c18b7671-f5762f35" class="header-w">
                             <h1 class="o--h1-small">Student-Led, Innovation-Fueled: Building Tomorrow's Success Stories at UIUC </h1>
@@ -497,10 +503,20 @@
                         <div id="w-node-_8eb9a56a-0ace-f1c4-4efd-9c38d2b1077f-f5762f35" class="home__slider-w">
                             <div data-poster-url="https://uploads-ssl.webflow.com/635931b47ccace7620762f33/6359a3fff1df58d0e3633832_Home Video-poster-00001.jpg" data-video-urls="https://uploads-ssl.webflow.com/635931b47ccace7620762f33/6359a3fff1df58d0e3633832_Home Video-transcode.mp4,https://uploads-ssl.webflow.com/635931b47ccace7620762f33/6359a3fff1df58d0e3633832_Home Video-transcode.webm"
                                 data-autoplay="true" data-loop="true" data-wf-ignore="true" data-w-id="69af6757-33bb-20b6-9c2d-83753451b196" class="home__background-video w-background-video w-background-video-atom"><video id="69af6757-33bb-20b6-9c2d-83753451b196-video" autoplay="" loop="" style="background-image:url(&quot;https://uploads-ssl.webflow.com/635931b47ccace7620762f33/6359a3fff1df58d0e3633832_Home Video-poster-00001.jpg&quot;)"
-                                    muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover"><source src="hero_video.mp4" data-wf-ignore="true"/><source src="https://uploads-ssl.webflow.com/635931b47ccace7620762f33/6359a3fff1df58d0e3633832_Home Video-transcode.webm" data-wf-ignore="true"/></video></div>
+                                    muted="false" playsinline="" data-wf-ignore="true" data-object-fit="cover"><source id = "myVideo" muted = "false" src="hero_video.mp4" data-wf-ignore="true"/></video>
+                            </div>
                         </div>
+                        <button class="button float-right" style="margin-right: auto; grid-column-start: 6;" onclick="toggleMute()">Mute/Unmute</button>
+                        <script>
+                            function toggleMute() {
+                                console.log("entered!");
+                                var video = document.getElementById("69af6757-33bb-20b6-9c2d-83753451b196-video");
+                                console.log(video.muted);
+                                video.muted = !video.muted;
+                            }
+                        </script>
                        
-                    </div>
+                    </div>           
                 </div>
             </div>
 
