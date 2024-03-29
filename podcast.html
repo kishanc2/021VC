@@ -326,69 +326,40 @@
         <div class="section is--news">
             <div class="c--content w-container">
                 <div class="w-layout-grid grid--portfolio">
-                    <div id="w-node-ff112232-3912-f83e-661c-9dc8590b86df-f5762f35" class="header-w">
-                        <h2 class="o--h2--xl">The Scaled Podcast</h2>
-                        <div class="link-w large">
-                            <a href="https://www.youtube.com/@Zero2OneVC" class="link--block large black w-inline-block">
-                                <div class="link-arrow__inner">
-                                    <div class="link__p">Explore Our Podcast</div>
-                                    <div class="link__line-w">
-                                        <div class="link__line black"></div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
                     <div id="w-node-_8040808f-2f37-624a-7d90-92a864f48d06-f5762f35" class="home-news-collection w-dyn-list">
                         <div role="list" class="feat-news-w w-dyn-items">
                             <div role="listitem" class="collection-item-3 w-dyn-item">
-                                <a href="https://www.youtube.com/watch?v=6zF_41u29sY&t=1692s" class="home--featured-news-link w-inline-block">
+                                <div class="home--featured-news-link w-inline-block">
                                     <div class="links--inner">
                                         <div class="links--top">
                                             <div class="heading--2">Dec 22, 2023</div>
                                             <h3 class="o--h5 articles">Scaled Pod: Avi Patel Founder of Nitrility; Revolutionizing the IP Marketplace Industry</h3>
                                         </div>
                                         <div class="links--bottom">
-                                            <div class="feat-news-img-w"><img src="1.png" loading="eager" alt="" sizes="(max-width: 479px) 87vw, (max-width: 767px) 81vw, (max-width: 991px) 39vw, 19vw"
-                                                    srcset="1.png 500w, 1.png 800w, 1.png 1080w, 1.png 1200w"
-                                                    class="image-4" /></div>
-                                            <div class="link-w">
-                                                <div class="link--block black">
-                                                    <div class="link__p">Watch Podcast</div>
-                                                    <div class="link__line-w">
-                                                        <div class="link__line black"></div>
-                                                    </div>
-                                                </div>
+                                            <div class="feat-news-img-w">
+                                                <iframe src="https://www.youtube.com/embed/6zF_41u29sY?start=1692" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                             </div>
                                         </div>
                                     </div>
-                                </a>
+                                </div>
                             </div>
                             <div role="listitem" class="collection-item-3 w-dyn-item">
-                                <a href="https://www.youtube.com/watch?v=0kBJ5X2GBks&t=609s" class="home--featured-news-link w-inline-block">
+                                <div class="home--featured-news-link w-inline-block">
                                     <div class="links--inner">
                                         <div class="links--top">
                                             <div class="heading--2">Dec 29, 2023</div>
                                             <h3 class="o--h5 articles">Scaled Pod: Andrew Gunderman & Toni Witt Founders of Genesis; Connecting the Midwestern Entreprenuership Community</h3>
                                         </div>
                                         <div class="links--bottom">
-                                            <div class="feat-news-img-w"><img src="2.png" loading="eager" alt="" sizes="(max-width: 479px) 87vw, (max-width: 767px) 81vw, (max-width: 991px) 39vw, 19vw"
-                                                    srcset="2.png 500w, 2.png 800w, 2.png 1080w, 2.png 1600w, 2.png 2000w, 2.png 2600w,2.png 3840w"
-                                                    class="image-4" /></div>
-                                            <div class="link-w">
-                                                <div class="link--block black">
-                                                    <div class="link__p">Watch Podcast</div>
-                                                    <div class="link__line-w">
-                                                        <div class="link__line black"></div>
-                                                    </div>
-                                                </div>
+                                            <div class="feat-news-img-w">
+                                                <iframe src="https://www.youtube.com/embed/0kBJ5X2GBks?start=609" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                             </div>
                                         </div>
                                     </div>
-                                </a>
+                                </div>
                             </div>
-                            
                         </div>
+                    </div>
                     </div>
                 </div>
             </div>
@@ -609,6 +580,23 @@ audio:not([controls]) {
     height: 0;
     display: none
 }
+
+.feat-news-img-w {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+    overflow: hidden;
+    margin-bottom: 20px; /* Optional: Adds some space below the iframe */
+}
+
+.feat-news-img-w iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
 
 .w-background-video--control>[hidden] {
     display: none !important
@@ -1639,6 +1627,7 @@ p {
 a {
     text-decoration: underline
 }
+
 
 .max-width-small {
     max-width: 360px
