@@ -501,20 +501,22 @@
                             </div>
                         </div>
                         <div id="w-node-_8eb9a56a-0ace-f1c4-4efd-9c38d2b1077f-f5762f35" class="home__slider-w">
-                            <div data-poster-url="https://uploads-ssl.webflow.com/635931b47ccace7620762f33/6359a3fff1df58d0e3633832_Home Video-poster-00001.jpg" data-video-urls="https://uploads-ssl.webflow.com/635931b47ccace7620762f33/6359a3fff1df58d0e3633832_Home Video-transcode.mp4,https://uploads-ssl.webflow.com/635931b47ccace7620762f33/6359a3fff1df58d0e3633832_Home Video-transcode.webm"
+                            <div style= "pointer-events: none; z-index: 2;"; data-poster-url="https://uploads-ssl.webflow.com/635931b47ccace7620762f33/6359a3fff1df58d0e3633832_Home Video-poster-00001.jpg" data-video-urls="https://uploads-ssl.webflow.com/635931b47ccace7620762f33/6359a3fff1df58d0e3633832_Home Video-transcode.mp4,https://uploads-ssl.webflow.com/635931b47ccace7620762f33/6359a3fff1df58d0e3633832_Home Video-transcode.webm"
                                 data-autoplay="true" data-loop="true" data-wf-ignore="true" data-w-id="69af6757-33bb-20b6-9c2d-83753451b196" class="home__background-video w-background-video w-background-video-atom"><video id="69af6757-33bb-20b6-9c2d-83753451b196-video" autoplay="" loop="" style="background-image:url(&quot;https://uploads-ssl.webflow.com/635931b47ccace7620762f33/6359a3fff1df58d0e3633832_Home Video-poster-00001.jpg&quot;)"
                                     muted="false" playsinline="" data-wf-ignore="true" data-object-fit="cover"><source id = "myVideo" muted = "false" src="hero_video.mp4" data-wf-ignore="true"/></video>
                             </div>
+                            <button class="button float-right" style="padding: .5rem .5rem; background-color: #000; z-index: 8; position: absolute; top: 20px; right: 20px; pointer-events: all;"
+                                onclick="toggleMute()">🔇</button>
+                            <script>
+                                function toggleMute() {
+                                    console.log("entered!");
+                                    var video = document.getElementById("69af6757-33bb-20b6-9c2d-83753451b196-video");
+                                    console.log(video.muted);
+                                    video.muted = !video.muted;
+                                }
+                            </script>
                         </div>
-                        <button class="button float-right" style="margin-right: auto; grid-column-start: 6;" onclick="toggleMute()">Mute/Unmute</button>
-                        <script>
-                            function toggleMute() {
-                                console.log("entered!");
-                                var video = document.getElementById("69af6757-33bb-20b6-9c2d-83753451b196-video");
-                                console.log(video.muted);
-                                video.muted = !video.muted;
-                            }
-                        </script>
+                        
                        
                     </div>           
                 </div>
