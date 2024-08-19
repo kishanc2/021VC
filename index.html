@@ -16,7 +16,7 @@
     <meta content="transparent_vc_logo.png" property="twitter:image" />
     <meta property="og:type" content="website" />
     <meta content="summary_large_image" name="twitter:card" />
-    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="all_css.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript">
         ! function(o, c) {
@@ -187,8 +187,8 @@
 
     <style>
         .home__background-video {
-            width: 100%;
-            height: 100%;
+            width: 70%;
+            height: 70%;
             object-fit: cover;
 
         }
@@ -335,6 +335,96 @@
             width: 100%;
             border: transparent;
             border-radius: 20%;
+        }
+    </style>
+    <!--New Application-Video Window Styling-->
+    <style>
+        .application-video-window-container {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .application-window {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 35%;
+            height: 300px;
+            margin-top: 2.5%;
+            margin-left: 9%;
+            margin-right: 6%;
+            border: solid;
+            border-width: 2px;
+            border-radius: 5%;
+        }
+
+        .application-window-text {
+            font-size: 200%;
+            text-align: center;
+            margin-bottom: 5%;
+        }
+
+        .application-window-button-container {
+            display: flex;
+            flex-direction: row; 
+            justify-content: center;
+        }
+
+        .application-window-button {
+            padding: 2.5%;
+            margin: 3%;
+            background-color: rgb(0, 187, 250);
+            color: white;
+            border: transparent;
+            border-radius: 30px;
+            min-width: 20%;
+        }
+
+        .video-window {
+            width: 50%;
+            position: relative;
+        }
+
+        .zvc-intro-video {
+            border: transparent;
+            border-radius: 5%;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: auto;
+            translate: -5% 10%;
+        }
+
+        .mute-button {
+            background-color: white;
+            width: 30px;
+            height: 30px;
+            border: transparent;
+            border-radius: 50%;
+            position: absolute;
+            top: 13%;
+            left: -3%;
+        }
+
+        .mute-button-img {
+            width: 100%;
+            object-fit: cover;
+            padding: 5%;
+        }
+
+        .application-video-window-graphic-container {
+            display: flex;
+            justify-content: center;
+            width: 50%;
+        }
+
+        .application-video-window-graphic {
+            display: block;
+            width: 80%;
+            margin-left: auto;
+            margin-right: 5%;
+            margin-top: auto;
+            object-fit: cover;
+            filter: brightness(5);
         }
     </style>
 </head>
@@ -485,27 +575,43 @@
                                 <div class="slide-nav w-slider-nav w-round"></div>
                             </div>
                         </div>
-                        <div id="w-node-_8eb9a56a-0ace-f1c4-4efd-9c38d2b1077f-f5762f35" class="home__slider-w">
-                            <div style= "pointer-events: none; z-index: 2;"; data-poster-url="https://uploads-ssl.webflow.com/635931b47ccace7620762f33/6359a3fff1df58d0e3633832_Home Video-poster-00001.jpg" data-video-urls="https://uploads-ssl.webflow.com/635931b47ccace7620762f33/6359a3fff1df58d0e3633832_Home Video-transcode.mp4,https://uploads-ssl.webflow.com/635931b47ccace7620762f33/6359a3fff1df58d0e3633832_Home Video-transcode.webm"
-                                data-autoplay="true" data-loop="true" data-wf-ignore="true" data-w-id="69af6757-33bb-20b6-9c2d-83753451b196" class="home__background-video w-background-video w-background-video-atom"><video id="69af6757-33bb-20b6-9c2d-83753451b196-video" autoplay="" loop="" style="background-image:url(&quot;https://uploads-ssl.webflow.com/635931b47ccace7620762f33/6359a3fff1df58d0e3633832_Home Video-poster-00001.jpg&quot;)"
-                                    muted="false" playsinline="" data-wf-ignore="true" data-object-fit="cover"><source id = "myVideo" muted = "false" src="hero_video.mp4" data-wf-ignore="true"/></video>
-                            </div>
-                            <button class="button float-right" style="padding: .5rem .5rem; background-color: #000; z-index: 8; position: absolute; top: 20px; right: 20px; pointer-events: all;"
-                                onclick="toggleMute()">🔇</button>
-                            <script>
-                                function toggleMute() {
-                                    console.log("entered!");
-                                    var video = document.getElementById("69af6757-33bb-20b6-9c2d-83753451b196-video");
-                                    console.log(video.muted);
-                                    video.muted = !video.muted;
-                                }
-                            </script>
-                        </div>                       
                     </div>           
                 </div>
             </div>
 
-            <section class="section no-bottom-spacing">
+            <!--Application-Video Window-->
+            <section class="section no-top-spacing no-bottom-spacing"
+                     style="display: flex;
+                            flex-direction: column;">
+                <div class="application-video-window-container">
+                    <div class="application-window">
+                        <p class="application-window-text">
+                            Fall 2024 Applications Open
+                        </p>
+                        <div class="application-window-button-container">
+                            <button class="application-window-button">Apply</button>
+                            <button class="application-window-button">Learn More</button>
+                        </div>
+                    </div>
+                    <div class="video-window">
+                        <video class="zvc-intro-video" id="69af6757-33bb-20b6-9c2d-83753451b196-video"
+                                src="hero_video.mp4" width="90%" height="100%" autoplay loop muted>
+                        </video>
+                        <button class="mute-button" id="mute-button">
+                            <img class="mute-button-img" id="mute-button-img" src="Mute_Icon.svg">
+                        </button>
+                    </div>
+                </div>
+                <div class="application-video-window-container">
+                    <div class="application-video-window-graphic-container">
+                        <img class="application-video-window-graphic" src="learn_build_launch.png">
+                    </div>
+                    <div class="empty-application-video-window-container">
+                    </div>
+                </div>
+            </section>
+
+            <section class="section no-top-spacing no-bottom-spacing">
                 <div class="w-layout-blockcontainer container w-container">
                     <div class="w-layout-grid grid">
                         <h2 id="w-node-de45cc94-e7a0-7210-2e32-f0a4a47ceefc-fc15b544" data-w-id="de45cc94-e7a0-7210-2e32-f0a4a47ceefc" class="text-white">We believe that support in the earliest stages is crucial. We are a dedicated team that'll help you accomplish your ambitous goals.</h2>
@@ -551,75 +657,86 @@
 
             <section class="section">
                 <div class="w-layout-blockcontainer container w-container">
+                    <div id="w-node-f65a071d-43b7-237f-b845-9d8077cd3d07-fc15b544" data-w-id="f65a071d-43b7-237f-b845-9d8077cd3d07" style="opacity:0" class="line"></div>
                     <div class="w-layout-grid grid-heading">
-                        <h2 id="w-node-_9f3ef0f0-e028-6c36-7405-90a944d3b84f-fc15b544" data-w-id="9f3ef0f0-e028-6c36-7405-90a944d3b84f" class="text-white">Zero2One VC&#x27;s Incredible Teams</h2>
+                        <h2 id="w-node-_9f3ef0f0-e028-6c36-7405-90a944d3b84f-fc15b544" data-w-id="9f3ef0f0-e028-6c36-7405-90a944d3b84f" class="text-white">Join Zero2One VC</h2>
                         <div id="w-node-c11db3c4-a731-743c-6c35-7714758c934c-fc15b544" data-w-id="c11db3c4-a731-743c-6c35-7714758c934c" class="wrap-content">
-                            <p class="text-white">Do you want to learn more about venture capital and startups? Please apply to join one of our teams below, we are always looking to grow our team with passionate individuals.</p>
-                            <a class="button w-inline-block">
-                                <div>Apply Below</div>
-                            </a>
+                            <p class="text-white">Do you want to learn more about venture capital and startups? Please apply to join the Fall 2024 incubator cohort or one of our teams below. Learn more below.</p>
+                            <button class="application-window-button" style="margin: 0">Apply</button>
                         </div>
                     </div>
                     <div id="w-node-f65a071d-43b7-237f-b845-9d8077cd3d07-fc15b544" data-w-id="f65a071d-43b7-237f-b845-9d8077cd3d07" style="opacity:0" class="line"></div>
                     <div class="cms-services w-dyn-list">
                         <div role="list" class="cms-services---list w-dyn-items">
                             <div role="listitem" class="cms-services---item w-dyn-item">
-                                <a data-w-id="6bd9427f-1ac5-783c-a8a5-f3eb925e2b25" href="" class="services-link w-inline-block">
+                                <a data-w-id="6bd9427f-1ac5-783c-a8a5-f3eb925e2b25" class="services-link w-inline-block">
                                     <div class="w-layout-grid services-grid">
                                         <div id="w-node-_47433f6f-3d25-d9f6-fc1a-921c33414edb-fc15b544" class="services-wrap">
-                                            <!-- <div class="numbers-wrap">
-                                                <div class="number">(</div>
-                                                <div class="number">1</div>
-                                                <div class="number">)</div>
-                                            </div> -->
-                                            <h3 id="w-node-_07c24cd8-e4a5-15d7-e66a-30c68b27e79b-fc15b544">Investment Team</h3>
+                                            <h3 id="w-node-_07c24cd8-e4a5-15d7-e66a-30c68b27e79b-fc15b544">Fall 2024 Incubator</h3>
                                         </div>
-                                        <p id="w-node-_5a6db189-2dc4-b5a8-1c0e-f81fa01ed5d5-fc15b544">Our investment team at the venture capital fund is responsible for identifying and supporting promising startups. Leveraging their diverse expertise, market knowledge, and strategic insights, the team plays a pivotal role in driving the fund's mission to facilitate the success of visionary student entrepreneurs.</p>
+                                        <p id="w-node-_5a6db189-2dc4-b5a8-1c0e-f81fa01ed5d5-fc15b544">
+                                            Have an idea for a startup? Join our incubator this semester to develop it over the course of 10 weeks that lead to a pitch competition. 
+                                        </p>
                                     </div>
                                 </a>
                             </div>
                             <div role="listitem" class="cms-services---item w-dyn-item">
-                                <a data-w-id="6bd9427f-1ac5-783c-a8a5-f3eb925e2b25" href="https://docs.google.com/forms/d/e/1FAIpQLSc_JJUrdVpc3oMAID4aM5psS5NrH3YcRFhSHVwKdUPye5G2EQ/viewform?pli=1" class="services-link w-inline-block">
+                                <a data-w-id="6bd9427f-1ac5-783c-a8a5-f3eb925e2b25" class="services-link w-inline-block">
                                     <div class="w-layout-grid services-grid">
                                         <div id="w-node-_47433f6f-3d25-d9f6-fc1a-921c33414edb-fc15b544" class="services-wrap">
-                                            <!-- <div class="numbers-wrap">
-                                                <div class="number">(</div>
-                                                <div class="number">2</div>
-                                                <div class="number">)</div>
-                                            </div> -->
-                                            <h3 id="w-node-_07c24cd8-e4a5-15d7-e66a-30c68b27e79b-fc15b544">Research Team</h3>
+                                            <h3 id="w-node-_07c24cd8-e4a5-15d7-e66a-30c68b27e79b-fc15b544">Operations Team</h3>
                                         </div>
-                                        <p id="w-node-_5a6db189-2dc4-b5a8-1c0e-f81fa01ed5d5-fc15b544">The research team within our venture capital fund is tasked with conducting thorough analyses to identify investment opportunities. Through meticulous market research, trend analysis, and due diligence, the team contributes significantly to the fund's overarching goal of supporting and guiding innovative startups toward success as well as educating aspiring venture capatilists about the technicalities of multiple industries.</p>
+                                        <p id="w-node-_5a6db189-2dc4-b5a8-1c0e-f81fa01ed5d5-fc15b544">
+                                            The operations team develops the content and the structure of the incubator along with leading and executing it.
+                                        </p>
                                     </div>
                                 </a>
                             </div>
                             <div role="listitem" class="cms-services---item w-dyn-item">
-                                <a data-w-id="6bd9427f-1ac5-783c-a8a5-f3eb925e2b25" href="https://docs.google.com/forms/d/e/1FAIpQLSc_JJUrdVpc3oMAID4aM5psS5NrH3YcRFhSHVwKdUPye5G2EQ/viewform?pli=1" class="services-link w-inline-block">
+                                <a data-w-id="6bd9427f-1ac5-783c-a8a5-f3eb925e2b25" class="services-link w-inline-block">
                                     <div class="w-layout-grid services-grid">
                                         <div id="w-node-_47433f6f-3d25-d9f6-fc1a-921c33414edb-fc15b544" class="services-wrap">
-                                            <!-- <div class="numbers-wrap">
-                                                <div class="number">(</div>
-                                                <div class="number">3</div>
-                                                <div class="number">)</div>
-                                            </div> -->
-                                            <h3 id="w-node-_07c24cd8-e4a5-15d7-e66a-30c68b27e79b-fc15b544">Incubator Team - Taking Applications</h3>
+                                            <h3 id="w-node-_07c24cd8-e4a5-15d7-e66a-30c68b27e79b-fc15b544">Outreach Team</h3>
                                         </div>
-                                        <p id="w-node-_5a6db189-2dc4-b5a8-1c0e-f81fa01ed5d5-fc15b544">The incubator team at our venture capital firm is responsible for guiding and nurturing early-stage startups through our 9 week inubator. Through mentorship, strategic advice, and operational support, the team plays a crucial role in fostering the growth and development of the incubated companies, contributing to the overall success of our entrepreneurial ecosystem.</p>
+                                        <p id="w-node-_5a6db189-2dc4-b5a8-1c0e-f81fa01ed5d5-fc15b544">
+                                            The outreach team engages in forging partnerships with other organizations on and off campus.
+                                        </p>
                                     </div>
                                 </a>
                             </div>
                             <div role="listitem" class="cms-services---item w-dyn-item">
-                                <a data-w-id="6bd9427f-1ac5-783c-a8a5-f3eb925e2b25" href="https://docs.google.com/forms/d/e/1FAIpQLSc_JJUrdVpc3oMAID4aM5psS5NrH3YcRFhSHVwKdUPye5G2EQ/viewform?pli=1" class="services-link w-inline-block">
+                                <a data-w-id="6bd9427f-1ac5-783c-a8a5-f3eb925e2b25" class="services-link w-inline-block">
                                     <div class="w-layout-grid services-grid">
                                         <div id="w-node-_47433f6f-3d25-d9f6-fc1a-921c33414edb-fc15b544" class="services-wrap">
-                                            <!-- <div class="numbers-wrap">
-                                                <div class="number">(</div>
-                                                <div class="number">4</div>
-                                                <div class="number">)</div>
-                                            </div> -->
-                                            <h3 id="w-node-_07c24cd8-e4a5-15d7-e66a-30c68b27e79b-fc15b544">Content Team - Taking Applications</h3>
+                                            <h3 id="w-node-_07c24cd8-e4a5-15d7-e66a-30c68b27e79b-fc15b544">Marketing Team</h3>
                                         </div>
-                                        <p id="w-node-_5a6db189-2dc4-b5a8-1c0e-f81fa01ed5d5-fc15b544">The content team at our venture capital firm takes charge of video editing, YouTube podcast production, and weekly newsletter creation. Their responsibilities encompass creating engaging and informative multimedia content to share insights, updates, and valuable industry knowledge, contributing to our mission of fostering meaningful connections within the entrepreneurial community.</p>
+                                        <p id="w-node-_5a6db189-2dc4-b5a8-1c0e-f81fa01ed5d5-fc15b544">
+                                            The marketing team helps with creative planning and the execution of marketing-related materials for social media on Instagram, LinkedIn, etc.
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div role="listitem" class="cms-services---item w-dyn-item">
+                                <a data-w-id="6bd9427f-1ac5-783c-a8a5-f3eb925e2b25" class="services-link w-inline-block">
+                                    <div class="w-layout-grid services-grid">
+                                        <div id="w-node-_47433f6f-3d25-d9f6-fc1a-921c33414edb-fc15b544" class="services-wrap">
+                                            <h3 id="w-node-_07c24cd8-e4a5-15d7-e66a-30c68b27e79b-fc15b544">Social Team</h3>
+                                        </div>
+                                        <p id="w-node-_5a6db189-2dc4-b5a8-1c0e-f81fa01ed5d5-fc15b544">
+                                            The social team hosts community events to foster stronger connections within the cohort and E-board members.
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div role="listitem" class="cms-services---item w-dyn-item">
+                                <a data-w-id="6bd9427f-1ac5-783c-a8a5-f3eb925e2b25" class="services-link w-inline-block">
+                                    <div class="w-layout-grid services-grid">
+                                        <div id="w-node-_47433f6f-3d25-d9f6-fc1a-921c33414edb-fc15b544" class="services-wrap">
+                                            <h3 id="w-node-_07c24cd8-e4a5-15d7-e66a-30c68b27e79b-fc15b544">Software Development Team</h3>
+                                        </div>
+                                        <p id="w-node-_5a6db189-2dc4-b5a8-1c0e-f81fa01ed5d5-fc15b544">
+                                            The software development team builds various software projects for the growth of the incubator.
+                                        </p>
                                     </div>
                                 </a>
                             </div>
@@ -718,6 +835,20 @@
 
 
     </main>
+    <!--Mute Button Script-->
+    <script>
+        let video = document.getElementById("69af6757-33bb-20b6-9c2d-83753451b196-video");
+        let muteButton = document.getElementById("mute-button");
+        let muteButtonImg = document.getElementById("mute-button-img");
+        muteButton.onclick = function () { 
+            if (video.muted) {
+                muteButtonImg.src = "Speaker_Icon.svg"; 
+            } else {
+                muteButtonImg.src = "Mute_Icon.svg";
+            }
+            video.muted = !video.muted;
+        }
+    </script>
     <!--UIUC FA24 Partnerships Circular Layout Script-->
     <script>
         const imgs = ['ec_logo.png', 'iventure_logo.jfif', 'scd_logo.jfif', 'tec_logo.png', 'founders_logo.png', 'entrecorps_logo.jfif'];
@@ -2336,6 +2467,10 @@ a {
 
 .section.no-bottom-spacing {
     padding-bottom: 0
+}
+
+.section.no-top-spacing {
+    padding-top: 0
 }
 
 .section.bg-video {
