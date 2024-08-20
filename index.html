@@ -193,7 +193,7 @@
 
         }
         html.has-scroll-smooth {
-            overflow: hidden;
+            overflow: auto;
             backface-visibility: hidden;
             transform: translateZ(0);
         }
@@ -437,8 +437,7 @@
         </div>
     </div>
     <div class="navbar shift"><a href="/" aria-current="page" class="home-link w-inline-block w--current"><img src="transparent_vc_logo.png" loading="lazy" alt="ZVC Logo" class="image-5"/></a>
-        <div
-            class="menu__inner-controls">
+        <div class="menu__inner-controls">
             <div class="nav--outer-links">
                 <a href="index.html" class="navbar-link shift w-inline-block">
                     <div class="nav-link--txt">Home</div>
@@ -453,10 +452,9 @@
                     <div class="nav-link--txt">Team</div>
                 </a>
             </div>
-           
+        </div>
     </div>
-    </div>
-    <main id="locoscrll" data-scroll-container="0" class="main">
+    <main class="main">
         <div class="reset_loco"></div>
         <div class="content">
             <div data-w-id="086aac7e-dd74-2f90-c765-4f0f826985c9" class="section is--hero">
@@ -589,8 +587,8 @@
                             Fall 2024 Applications Open
                         </p>
                         <div class="application-window-button-container">
-                            <button class="application-window-button">Apply</button>
-                            <button class="application-window-button">Learn More</button>
+                            <button class="application-window-button" onclick="window.location.href='https://forms.gle/3TTJpGFTTdARdr616'">Apply</button>
+                            <button class="application-window-button" onclick="document.getElementById('learn-more').scrollIntoView({behavior: 'smooth'})">Learn More</button>
                         </div>
                     </div>
                     <div class="video-window">
@@ -655,14 +653,14 @@
             </div>
         </section>
 
-            <section class="section no-bottom-spacing">
+            <section class="section no-bottom-spacing" id="learn-more">
                 <div class="w-layout-blockcontainer container w-container" style="padding-bottom: 0px;">
                     <div id="w-node-f65a071d-43b7-237f-b845-9d8077cd3d07-fc15b544" data-w-id="f65a071d-43b7-237f-b845-9d8077cd3d07" style="opacity:0" class="line"></div>
                     <div class="w-layout-grid grid-heading">
                         <h2 id="w-node-_9f3ef0f0-e028-6c36-7405-90a944d3b84f-fc15b544" data-w-id="9f3ef0f0-e028-6c36-7405-90a944d3b84f" class="text-white">Join Zero2One VC</h2>
                         <div id="w-node-c11db3c4-a731-743c-6c35-7714758c934c-fc15b544" data-w-id="c11db3c4-a731-743c-6c35-7714758c934c" class="wrap-content">
                             <p class="text-white">Do you want to learn more about venture capital and startups? Please apply to join the Fall 2024 incubator cohort or one of our teams below. Learn more below.</p>
-                            <button class="application-window-button" style="margin: 0">Apply</button>
+                            <button class="application-window-button" style="margin: 0" onclick="window.location.href='https://forms.gle/3TTJpGFTTdARdr616'">Apply</button>
                         </div>
                     </div>
                     <div id="w-node-f65a071d-43b7-237f-b845-9d8077cd3d07-fc15b544" data-w-id="f65a071d-43b7-237f-b845-9d8077cd3d07" style="opacity:0" class="line"></div>
@@ -883,60 +881,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
     <!-- Locomotive -->
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.6.1/dist/locomotive-scroll.min.js"></script>
-    <script>
-        var OldBrowser = /iPhone|iPad|Android|chrome.76|firefox.87|safari.12/i.test(navigator.userAgent);
-        if (!OldBrowser) {
-            const scroll = new LocomotiveScroll({
-                el: document.querySelector('[data-scroll-container]'),
-                smooth: true,
-                lerp: 0.1, // Linear Interpolation, 0 > 1 // Closer to 0 is smoother
-                multiplier: 1.3, // Effect Multiplier
-                reloadOnContextChange: true,
-                scrollFromAnywhere: true,
-                touchMultiplier: 2,
-                smoothMobile: 0,
-                smartphone: {
-                    smooth: !0,
-                    breakpoint: 767
-                },
-                tablet: {
-                    smooth: !0,
-                    breakpoint: 991
-                },
-            });
-            //accordion reset
-            document.querySelectorAll(".approach__tab-link,.filter-link,.reset_loco,.newsroom--tab-link,.adv--accordion-bttn").forEach((item) => {
-                item.onclick = () => {
-                    scroll.update();
-
-                    setTimeout(() => {
-                        scroll.update();
-                    }, 800);
-                }
-            })
-            //resume loco on modal close
-            document.querySelectorAll(".close-modal,.x-wrapper,.close-modal--advisors").forEach((item) => {
-                item.onclick = () => {
-                    scroll.start();
-
-                    setTimeout(() => {
-                        scroll.start();
-                    }, 1000);
-                }
-            })
-            //stop loco on modal open
-            document.querySelectorAll(".slider__controller,.brgr-wrapper,.slider__controller--advisors").forEach((item) => {
-                item.onclick = () => {
-                    scroll.stop();
-
-                    setTimeout(() => {
-                        scroll.stop();
-                    }, 1000);
-                }
-            })
-
-        }
-    </script>
     <!--Seamless Transition-->
     <script>
         let transitionTrigger = $(".transition-trigger");
@@ -2356,7 +2300,7 @@ a {
     top: 0%;
     bottom: auto;
     left: 0%;
-    right: 0%
+    right: 0%;
 }
 
 .wrap-navbar-button {
