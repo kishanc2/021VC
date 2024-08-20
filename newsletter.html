@@ -193,7 +193,7 @@
 
         }
         html.has-scroll-smooth {
-            overflow: hidden;
+            overflow: auto;
             backface-visibility: hidden;
             transform: translateZ(0);
         }
@@ -255,12 +255,12 @@
 
         ::-moz-selection {
             color: white;
-            background: #0cdb90;
+            background: rgb(0, 191, 255);
         }
 
         ::selection {
             color: white;
-            background: #0cdb90;
+            background: rgb(0, 191, 255);
         }
     </style>
     <style>
@@ -316,7 +316,7 @@
            
     </div>
     </div>
-    <main id="locoscrll" data-scroll-container="0" class="main">
+    <main class="main">
         <div class="reset_loco"></div>
         <section class="section bg-black-02" style="padding-bottom: 0px;">
             <div class="w-layout-blockcontainer container w-container" style="padding-bottom: 0px;">
@@ -324,7 +324,7 @@
                     <h2 id="w-node-_4006bbd0-31aa-7c99-6a2d-9b932dc5c534-fc15b544" data-w-id="4006bbd0-31aa-7c99-6a2d-9b932dc5c534" class="text-white">The Digital Pulse: Your gateway to the ever evolving world of startups, venture capital, and technology</h2>
                     <div id="w-node-f8bb4680-4b6d-8b85-4ca2-caeb80653eb5-fc15b544" data-w-id="f8bb4680-4b6d-8b85-4ca2-caeb80653eb5" class="wrap-content">
                         <p class="text-white">The Digital Pulse is a weekly newsletter that shares our team's insights on the latest news in the startup ecosystem</p>
-                        <a href="https://thedigitalpulse.substack.com" class="button w-inline-block" target="_blank">
+                        <a href="https://thedigitalpulse.substack.com" class="button w-inline-block" target="_blank" style="background-color: rgb(0, 191, 255); border: none;">
                             <div>Explore Our Articles</div>
                         </a>
                     </div>
@@ -365,7 +365,7 @@
             
         </section>
 
-            <section class="section bg-black-02">
+            <section class="section bg-black-02 no-bottom-spacing">
                 <div class="w-layout-blockcontainer container no-bottom-spacing w-container">
                     <div class="w-layout-grid grid-4">
                         <div class="div-block-5">
@@ -412,60 +412,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
     <!-- Locomotive -->
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.6.1/dist/locomotive-scroll.min.js"></script>
-    <script>
-        var OldBrowser = /iPhone|iPad|Android|chrome.76|firefox.87|safari.12/i.test(navigator.userAgent);
-        if (!OldBrowser) {
-            const scroll = new LocomotiveScroll({
-                el: document.querySelector('[data-scroll-container]'),
-                smooth: true,
-                lerp: 0.1, // Linear Interpolation, 0 > 1 // Closer to 0 is smoother
-                multiplier: 1.3, // Effect Multiplier
-                reloadOnContextChange: true,
-                scrollFromAnywhere: true,
-                touchMultiplier: 2,
-                smoothMobile: 0,
-                smartphone: {
-                    smooth: !0,
-                    breakpoint: 767
-                },
-                tablet: {
-                    smooth: !0,
-                    breakpoint: 991
-                },
-            });
-            //accordion reset
-            document.querySelectorAll(".approach__tab-link,.filter-link,.reset_loco,.newsroom--tab-link,.adv--accordion-bttn").forEach((item) => {
-                item.onclick = () => {
-                    scroll.update();
-
-                    setTimeout(() => {
-                        scroll.update();
-                    }, 800);
-                }
-            })
-            //resume loco on modal close
-            document.querySelectorAll(".close-modal,.x-wrapper,.close-modal--advisors").forEach((item) => {
-                item.onclick = () => {
-                    scroll.start();
-
-                    setTimeout(() => {
-                        scroll.start();
-                    }, 1000);
-                }
-            })
-            //stop loco on modal open
-            document.querySelectorAll(".slider__controller,.brgr-wrapper,.slider__controller--advisors").forEach((item) => {
-                item.onclick = () => {
-                    scroll.stop();
-
-                    setTimeout(() => {
-                        scroll.stop();
-                    }, 1000);
-                }
-            })
-
-        }
-    </script>
     <!--Seamless Transition-->
     <script>
         let transitionTrigger = $(".transition-trigger");
