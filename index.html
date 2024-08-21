@@ -16,7 +16,7 @@
     <meta content="transparent_vc_logo.png" property="twitter:image" />
     <meta property="og:type" content="website" />
     <meta content="summary_large_image" name="twitter:card" />
-    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="all_css.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript">
         ! function(o, c) {
@@ -187,13 +187,13 @@
 
     <style>
         .home__background-video {
-            width: 100%;
-            height: 100%;
+            width: 70%;
+            height: 70%;
             object-fit: cover;
 
         }
         html.has-scroll-smooth {
-            overflow: hidden;
+            overflow: auto;
             backface-visibility: hidden;
             transform: translateZ(0);
         }
@@ -240,7 +240,7 @@
             position: absolute;
             top: 0;
             right: 0;
-            background-color: #0CDB90;
+            background-color: rgb(0, 191, 255);
             opacity: 1;
             width: 4px;
             cursor: -webkit-grab;
@@ -255,12 +255,12 @@
 
         ::-moz-selection {
             color: white;
-            background: #0cdb90;
+            background: rgb(0, 191, 255);;
         }
 
         ::selection {
             color: white;
-            background: #0cdb90;
+            background: rgb(0, 191, 255);;
         }
     </style>
     <style>
@@ -287,6 +287,146 @@
             user-drag: none;
         }
     </style>
+    <!--Styling for FA24 University Partnerships-->
+    <style>
+        .uni-partners-section {
+            left: 0px;
+            right: 0px;
+            height: 650px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .uni-partners-circle {
+            border: solid;
+            border-width: 2px;
+            border-color: lightgrey; 
+            border-radius: 50%;
+            width: 650px;
+            height: 650px;
+            position: relative;
+        }
+
+        .uni-partners-circle-interior-content-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+        }
+
+        .uni-partners-circle-interior-text {
+            font-size: 35px;
+            text-align: center;
+            padding-left: 10%;
+            padding-right: 10%;
+        }
+
+        .uni-partner {
+            width: 125px;
+            height: 125px;
+            position: absolute;
+            translate: -50% -50%;
+        }
+
+        .uni-partner-logo {
+            width: 100%;
+            border: transparent;
+            border-radius: 20%;
+        }
+    </style>
+    <!--New Application-Video Window Styling-->
+    <style>
+        .application-video-window-container {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .application-window {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 35%;
+            height: 300px;
+            margin-top: 2.5%;
+            margin-left: 9%;
+            margin-right: 6%;
+            border: solid;
+            border-width: 2px;
+            border-radius: 5%;
+        }
+
+        .application-window-text {
+            font-size: 200%;
+            text-align: center;
+            margin-bottom: 5%;
+        }
+
+        .application-window-button-container {
+            display: flex;
+            flex-direction: row; 
+            justify-content: center;
+        }
+
+        .application-window-button {
+            padding: 2.5%;
+            margin: 3%;
+            background-color: rgb(0, 187, 250);
+            color: white;
+            border: transparent;
+            border-radius: 30px;
+            min-width: 20%;
+        }
+
+        .video-window {
+            width: 50%;
+            position: relative;
+        }
+
+        .zvc-intro-video {
+            border: transparent;
+            border-radius: 5%;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: auto;
+            translate: -5% 10%;
+        }
+
+        .mute-button {
+            background-color: white;
+            width: 30px;
+            height: 30px;
+            border: transparent;
+            border-radius: 50%;
+            position: absolute;
+            top: 13%;
+            left: -3%;
+        }
+
+        .mute-button-img {
+            width: 100%;
+            object-fit: cover;
+            padding: 5%;
+        }
+
+        .application-video-window-graphic-container {
+            display: flex;
+            justify-content: center;
+            width: 50%;
+        }
+
+        .application-video-window-graphic {
+            display: block;
+            width: 80%;
+            margin-left: auto;
+            margin-right: 5%;
+            margin-top: auto;
+            object-fit: cover;
+            filter: brightness(5);
+        }
+    </style>
 </head>
 
 <body class="body">
@@ -297,29 +437,24 @@
         </div>
     </div>
     <div class="navbar shift"><a href="/" aria-current="page" class="home-link w-inline-block w--current"><img src="transparent_vc_logo.png" loading="lazy" alt="ZVC Logo" class="image-5"/></a>
-        <div
-            class="menu__inner-controls">
+        <div class="menu__inner-controls">
             <div class="nav--outer-links">
+                <a href="index.html" class="navbar-link shift w-inline-block">
+                    <div class="nav-link--txt">Home</div>
+                </a>
                 <a href="incubator.html" class="navbar-link shift w-inline-block">
                     <div class="nav-link--txt">Incubator</div>
                 </a>
-                <a href="https://thedigitalpulse.substack.com/?utm_source=substack&utm_medium=web&utm_campaign=substack_profile" class="navbar-link shift w-inline-block", target = "_blank">
+                <a href="newsletter.html" class="navbar-link shift w-inline-block">
                     <div class="nav-link--txt">Newsletter</div>
-                </a>
-                <a href="https://www.youtube.com/@Zero2OneVC" class="navbar-link shift w-inline-block", target = "_blank">
-                    <div class="nav-link--txt">Podcast</div>
-                </a>
-                <a href="index.html" class="navbar-link shift w-inline-block">
-                    <div class="nav-link--txt">Research</div>
                 </a>
                 <a href="team.html" class="navbar-link shift w-inline-block">
                     <div class="nav-link--txt">Team</div>
                 </a>
             </div>
-           
+        </div>
     </div>
-    </div>
-    <main id="locoscrll" data-scroll-container="0" class="main">
+    <main class="main">
         <div class="reset_loco"></div>
         <div class="content">
             <div data-w-id="086aac7e-dd74-2f90-c765-4f0f826985c9" class="section is--hero">
@@ -332,7 +467,7 @@
                             </div>
                         </div>
                         <div id="w-node-cbeb6cae-6377-6d82-24b2-de4b4d19e5d0-f5762f35" class="home-slider-wrap">
-                            <div data-delay="3500" data-animation="cross" class="highlights-slider w-slider" data-autoplay="true" data-easing="ease" data-hide-arrows="false" data-disable-swipe="false" data-autoplay-limit="0" data-nav-spacing="3" data-duration="1000"
+                            <div data-delay="8000" data-animation="cross" class="highlights-slider w-slider" data-autoplay="true" data-easing="ease" data-hide-arrows="false" data-disable-swipe="false" data-autoplay-limit="0" data-nav-spacing="3" data-duration="500"
                                 data-infinite="true">
                                 <div class="mask-slide w-slider-mask">
                                     <div class="slider-highlights w-slide">
@@ -346,43 +481,12 @@
                                                             </div>
                                                         </div>
                                                         <div class="meta-wrap">
-                                                            <h2 class="overline--meta">Digital Pulse</h2>
+                                                            <h2 class="overline--meta" style="color: rgb(0, 191, 255);">Digital Pulse</h2>
                                                         </div>
                                                     </div>
                                                     <div class="slider-news-wrapper">
                                                         <a href="https://thedigitalpulse.substack.com/p/characterai-pioneering-the-next-wave" class="highlight-title-wrap w-inline-block">
                                                             <h3 class="slider-title">Redefining Interaction: How Character.AI is Transforming AI Chatbots for the Digital Generation</h3>
-                                                            <div class="link-w">
-                                                                <div class="link--block slider">
-                                                                    <div class="link__p">Learn More</div>
-                                                                    <div class="link__line-w on-black">
-                                                                        <div class="link__line"></div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="slider-highlights w-slide">
-                                        <div class="slider--portfolio-list-wrapper w-dyn-list">
-                                            <div role="list" class="slider-cms-list w-dyn-items">
-                                                <div role="listitem" class="slider--cms-item w-dyn-item">
-                                                    <div class="slider-wrap--pad-54">
-                                                        <div class="slide-timer-wrapper">
-                                                            <div class="timerwrap">
-                                                                <div class="slider-timer"></div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="meta-wrap">
-                                                            <h4 class="overline--meta">Scaled Podcast</h4>
-                                                        </div>
-                                                    </div>
-                                                    <div class="slider-news-wrapper">
-                                                        <a href="https://www.youtube.com/watch?v=6zF_41u29sY&t=1692s" class="highlight-title-wrap w-inline-block">
-                                                            <h3 class="slider-title">Scaled Pod Ep.1: Avi Patel Founder of Nitrility; Revolutionizing the IP marketplace</h3>
                                                             <div class="link-w">
                                                                 <div class="link--block slider">
                                                                     <div class="link__p">Learn More</div>
@@ -408,7 +512,7 @@
                                                             </div>
                                                         </div>
                                                         <div class="meta-wrap">
-                                                            <h4 class="overline--meta">Digital Pulse</h4>
+                                                            <h4 class="overline--meta" style="color: rgb(0, 191, 255);">Digital Pulse</h4>
                                                         </div>
                                                     </div>
                                                     <div class="slider-news-wrapper">
@@ -439,38 +543,7 @@
                                                             </div>
                                                         </div>
                                                         <div class="meta-wrap">
-                                                            <h4 class="overline--meta">Scaled Podcast</h4>
-                                                        </div>
-                                                    </div>
-                                                    <div class="slider-news-wrapper">
-                                                        <a href="https://www.youtube.com/watch?v=0kBJ5X2GBks" class="highlight-title-wrap w-inline-block">
-                                                            <h3 class="slider-title">Scaled Pod Ep.2: Andrew Gunderman & Toni Witt Founders of Genesis; Connecting the Midwestern entreprenuership ecosystem</h3>
-                                                            <div class="link-w">
-                                                                <div class="link--block slider">
-                                                                    <div class="link__p">Learn More</div>
-                                                                    <div class="link__line-w on-black">
-                                                                        <div class="link__line"></div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="slider-highlights w-slide">
-                                        <div class="slider--news-list-wrapper w-dyn-list">
-                                            <div role="list" class="slider-cms-list w-dyn-items">
-                                                <div role="listitem" class="slider--cms-item w-dyn-item">
-                                                    <div class="slider-wrap--pad-54">
-                                                        <div class="slide-timer-wrapper">
-                                                            <div class="timerwrap">
-                                                                <div class="slider-timer"></div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="meta-wrap">
-                                                            <h4 class="overline--meta">Digital Pulse</h4>
+                                                            <h4 class="overline--meta" style="color: rgb(0, 191, 255);">Digital Pulse</h4>
                                                         </div>
                                                     </div>
                                                     <div class="slider-news-wrapper">
@@ -500,35 +573,51 @@
                                 <div class="slide-nav w-slider-nav w-round"></div>
                             </div>
                         </div>
-                        <div id="w-node-_8eb9a56a-0ace-f1c4-4efd-9c38d2b1077f-f5762f35" class="home__slider-w">
-                            <div style= "pointer-events: none; z-index: 2;"; data-poster-url="https://uploads-ssl.webflow.com/635931b47ccace7620762f33/6359a3fff1df58d0e3633832_Home Video-poster-00001.jpg" data-video-urls="https://uploads-ssl.webflow.com/635931b47ccace7620762f33/6359a3fff1df58d0e3633832_Home Video-transcode.mp4,https://uploads-ssl.webflow.com/635931b47ccace7620762f33/6359a3fff1df58d0e3633832_Home Video-transcode.webm"
-                                data-autoplay="true" data-loop="true" data-wf-ignore="true" data-w-id="69af6757-33bb-20b6-9c2d-83753451b196" class="home__background-video w-background-video w-background-video-atom"><video id="69af6757-33bb-20b6-9c2d-83753451b196-video" autoplay="" loop="" style="background-image:url(&quot;https://uploads-ssl.webflow.com/635931b47ccace7620762f33/6359a3fff1df58d0e3633832_Home Video-poster-00001.jpg&quot;)"
-                                    muted="false" playsinline="" data-wf-ignore="true" data-object-fit="cover"><source id = "myVideo" muted = "false" src="hero_video.mp4" data-wf-ignore="true"/></video>
-                            </div>
-                            <button class="button float-right" style="padding: .5rem .5rem; background-color: #000; z-index: 8; position: absolute; top: 20px; right: 20px; pointer-events: all;"
-                                onclick="toggleMute()">🔇</button>
-                            <script>
-                                function toggleMute() {
-                                    console.log("entered!");
-                                    var video = document.getElementById("69af6757-33bb-20b6-9c2d-83753451b196-video");
-                                    console.log(video.muted);
-                                    video.muted = !video.muted;
-                                }
-                            </script>
-                        </div>                       
                     </div>           
                 </div>
             </div>
 
-            <section class="section no-bottom-spacing bg-black-02">
+            <!--Application-Video Window-->
+            <section class="section no-top-spacing no-bottom-spacing"
+                     style="display: flex;
+                            flex-direction: column;">
+                <div class="application-video-window-container">
+                    <div class="application-window">
+                        <p class="application-window-text">
+                            Fall 2024 Applications Open
+                        </p>
+                        <div class="application-window-button-container">
+                            <button class="application-window-button" onclick="window.location.href='https://forms.gle/3TTJpGFTTdARdr616'">Apply</button>
+                            <button class="application-window-button" onclick="document.getElementById('learn-more').scrollIntoView({behavior: 'smooth'})">Learn More</button>
+                        </div>
+                    </div>
+                    <div class="video-window">
+                        <video class="zvc-intro-video" id="69af6757-33bb-20b6-9c2d-83753451b196-video"
+                                src="hero_video.mp4" width="90%" height="100%" autoplay loop muted>
+                        </video>
+                        <button class="mute-button" id="mute-button">
+                            <img class="mute-button-img" id="mute-button-img" src="Mute_Icon.svg">
+                        </button>
+                    </div>
+                </div>
+                <div class="application-video-window-container">
+                    <div class="application-video-window-graphic-container">
+                        <img class="application-video-window-graphic" src="learn_build_launch.png">
+                    </div>
+                    <div class="empty-application-video-window-container">
+                    </div>
+                </div>
+            </section>
+
+            <section class="section no-top-spacing no-bottom-spacing">
                 <div class="w-layout-blockcontainer container w-container">
                     <div class="w-layout-grid grid">
-                        <h2 id="w-node-de45cc94-e7a0-7210-2e32-f0a4a47ceefc-fc15b544" data-w-id="de45cc94-e7a0-7210-2e32-f0a4a47ceefc" class="text-white">We believe that support in the earliest stages is crucial. <span class="text-transparent white">We are a dedicated team that'll help you accomplish your ambitous goals.</span></h2>
+                        <h2 id="w-node-de45cc94-e7a0-7210-2e32-f0a4a47ceefc-fc15b544" data-w-id="de45cc94-e7a0-7210-2e32-f0a4a47ceefc" class="text-white">We believe that support in the earliest stages is crucial. We are a dedicated team that'll help you accomplish your ambitous goals.</h2>
                         <div id="w-node-_968a6381-2419-4302-a28b-ff1279523c9c-fc15b544"
                             class="placeholder"></div>
                         <div id="w-node-_89f5915a-e482-f142-079b-ae72db7491fe-fc15b544" class="placeholder"></div>
                         <div id="w-node-e572e738-4442-ce73-e871-b9a7eb3f20be-fc15b544">
-                            <p id="w-node-_2a4ed86d-1e23-c6ef-d727-310e36a0f495-fc15b544" data-w-id="2a4ed86d-1e23-c6ef-d727-310e36a0f495" class="text-white">As a experienced team deeply committed to the success of startups, our strength, unwavering focus, and extensive experience converge to provide unparalleled support in driving growth. With a collective expertise honed through diverse challenges, we stand ready to guide and elevate each startup under our care to unprecedented heights of success..</p>
+                            <p id="w-node-_2a4ed86d-1e23-c6ef-d727-310e36a0f495-fc15b544" data-w-id="2a4ed86d-1e23-c6ef-d727-310e36a0f495" class="text-white">As an experienced team deeply committed to the success of startups, our strength, unwavering focus, and extensive experience converge to provide unparalleled support in driving growth. With a collective expertise honed through diverse challenges, we stand ready to guide and elevate each startup under our care to unprecedented heights of success.</p>
                             <div
                                 class="w-layout-grid grid-2">
                                 <div id="w-node-d72ccdcd-ff30-c2ca-2d18-45173af27ef5-fc15b544" data-w-id="d72ccdcd-ff30-c2ca-2d18-45173af27ef5" class="spacing-vertical">
@@ -540,259 +629,112 @@
                                     <div class="text-transparent white text-0-9">Incubator Alums</div>
                                 </div>
                                 <div id="w-node-b39dcfb2-a4cf-a548-42ad-fed973de40bb-fc15b544" data-w-id="b39dcfb2-a4cf-a548-42ad-fed973de40bb" class="spacing-vertical">
-                                    <div class="text-huge">3 <span class="text-1-25"></span></div>
+                                    <div class="text-huge">6 <span class="text-1-25">+</span></div>
                                     <div class="text-transparent white text-0-9">University Partnerships</div>
                                 </div>
                                 <div id="w-node-a1319b71-4393-2f16-4c7f-07697dc17e67-fc15b544" data-w-id="a1319b71-4393-2f16-4c7f-07697dc17e67" class="spacing-vertical">
-                                    <div class="text-huge">4 <span class="text-1-25"></span></div>
+                                    <div class="text-huge">4<span class="text-1-25"></span></div>
                                     <div class="text-transparent white text-0-9">Incubator Cohorts</div>
                                 </div>
                         </div>
                     </div>
                 </div>
         </div>
-        <div data-poster-url="https://assets-global.website-files.com/65560fe120333714fc15b546/655b7d072f46b874866da5ea_temaplte-neurafy-video-02-poster-00001.jpg" data-video-urls="https://assets-global.website-files.com/65560fe120333714fc15b546/655b7d072f46b874866da5ea_temaplte-neurafy-video-02-transcode.mp4,https://assets-global.website-files.com/65560fe120333714fc15b546/655b7d072f46b874866da5ea_temaplte-neurafy-video-02-transcode.webm"
-            data-autoplay="true" data-loop="true" data-wf-ignore="true" id="w-node-f8b6815a-6ab4-c591-4c38-322c29bb0470-fc15b544" class="background-video w-background-video w-background-video-atom"><video id="f8b6815a-6ab4-c591-4c38-322c29bb0470-video" autoplay="" loop="" style="background-image:url(&quot;https://assets-global.website-files.com/65560fe120333714fc15b546/655b7d072f46b874866da5ea_temaplte-neurafy-video-02-poster-00001.jpg&quot;)"
-                muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover"><source src="https://assets-global.website-files.com/65560fe120333714fc15b546/655b7d072f46b874866da5ea_temaplte-neurafy-video-02-transcode.mp4" data-wf-ignore="true"/><source src="https://assets-global.website-files.com/65560fe120333714fc15b546/655b7d072f46b874866da5ea_temaplte-neurafy-video-02-transcode.webm" data-wf-ignore="true"/></video></div>
         </section>
-
-
-
-        <section class="section bg-black-02">
-            <div class="w-layout-blockcontainer container w-container">
-                <div class="w-layout-grid grid-heading">
-                    <h2 id="w-node-_4006bbd0-31aa-7c99-6a2d-9b932dc5c534-fc15b544" data-w-id="4006bbd0-31aa-7c99-6a2d-9b932dc5c534" class="text-white"><span class="text-transparent white">The Digital Pulse: Your gateway to the </span>ever evolving world of startups, venture capital, and technology</h2>
-                    <div id="w-node-f8bb4680-4b6d-8b85-4ca2-caeb80653eb5-fc15b544" data-w-id="f8bb4680-4b6d-8b85-4ca2-caeb80653eb5" class="wrap-content">
-                        <p class="text-white">The Digital Pulse is a weekly newsletter that shares our team's insights on the latest news in the startup ecosystem</p>
-                        <a href="https://thedigitalpulse.substack.com" class="button w-inline-block">
-                            <div>Explore Our Articles</div>
-                        </a>
-                    </div>
-                </div>
-                <div class="cms-resources w-dyn-list">
-                    <div role="list" class="cms-resources---list w-dyn-items">
-                        <div data-w-id="1db1d41a-4107-4538-61fe-3979d99525a3" role="listitem" class="cms-resources---item w-dyn-item">
-                            <a data-w-id="50aad1a6-9d0d-7a77-951e-33d50bcc3e9b" href="https://thedigitalpulse.substack.com/p/characterai-pioneering-the-next-wave" class="link-resources w-inline-block">
-                                <div class="wrap-image-resources"><img alt="" loading="lazy" data-w-id="c7ab2d37-98bb-0729-e078-f78c1b9a6917" src="https://assets-global.website-files.com/655b5f2ca01dc7a0d5add794/659562d31d646507b4d738e5_neurafy-17485683.jpg" sizes="100vw" srcset="https://assets-global.website-files.com/655b5f2ca01dc7a0d5add794/659562d31d646507b4d738e5_neurafy-17485683-p-500.jpg 500w, https://assets-global.website-files.com/655b5f2ca01dc7a0d5add794/659562d31d646507b4d738e5_neurafy-17485683-p-800.jpg 800w, https://assets-global.website-files.com/655b5f2ca01dc7a0d5add794/659562d31d646507b4d738e5_neurafy-17485683-p-1080.jpg 1080w, https://assets-global.website-files.com/655b5f2ca01dc7a0d5add794/659562d31d646507b4d738e5_neurafy-17485683-p-1600.jpg 1600w, https://assets-global.website-files.com/655b5f2ca01dc7a0d5add794/659562d31d646507b4d738e5_neurafy-17485683.jpg 1778w"
-                                        class="image-resources" /></div>
-                                <div class="text-1-5 text-white">Redefining Interaction: How Character.AI is Transforming AI Chatbots for the Digital Generation</div>
-                                <p id="w-node-d50c58f2-707c-df75-7841-f4d196cb302b-fc15b544" class="text-white">Character.AI, emerging prominently in the AI chatbot sector, is reshaping how younger audiences interact with artificial intelligence. This startup, emerging from the creative minds of former Google engineers, represents a significant shift in the AI chatbot paradigm, offering unique, engaging experiences that resonate with a youthful user base...</p>
-                            </a>
-                        </div>
-                        <div data-w-id="1db1d41a-4107-4538-61fe-3979d99525a3" role="listitem" class="cms-resources---item w-dyn-item">
-                            <a data-w-id="50aad1a6-9d0d-7a77-951e-33d50bcc3e9b" href="https://thedigitalpulse.substack.com/p/what-could-q-be-and-its-implications" class="link-resources w-inline-block">
-                                <div class="wrap-image-resources"><img alt="" loading="lazy" data-w-id="c7ab2d37-98bb-0729-e078-f78c1b9a6917" src="openai.png" sizes="100vw" srcset="openai.png 500w, openai.png 800w, openai.png 1080w, openai.png 1250w"
-                                        class="image-resources" /></div>
-                                <div class="text-1-5 text-white">The Dawn of a New AI Era: OpenAI's Rumored Q*</div>
-                                <p id="w-node-d50c58f2-707c-df75-7841-f4d196cb302b-fc15b544" class="text-white">In the rapidly evolving landscape of artificial intelligence, OpenAI has reportedly made a groundbreaking development with its new model, Q* (pronounced Q star). This new AI model is said to be capable of solving grade-school-level mathematics, a feat that marks a significant step forward from the capabilities of existing models like GPT-4...</p>
-                            </a>
-                        </div>
-                        <div data-w-id="1db1d41a-4107-4538-61fe-3979d99525a3" role="listitem" class="cms-resources---item w-dyn-item">
-                            <a data-w-id="50aad1a6-9d0d-7a77-951e-33d50bcc3e9b" href="https://thedigitalpulse.substack.com/p/quantum-computing-and-the-fragility" class="link-resources w-inline-block">
-                                <div class="wrap-image-resources"><img alt="" loading="lazy" data-w-id="c7ab2d37-98bb-0729-e078-f78c1b9a6917" src="quantum.png" sizes="100vw" srcset="quantum.png 500w, quantum.png 800w, quantum.png 1080w, quantum.png 1600w, quantum.png 1778w"
-                                        class="image-resources" /></div>
-                                <div class="text-1-5 text-white">Quantum Computing and the Fragility of Digital Privacy</div>
-                                <p id="w-node-d50c58f2-707c-df75-7841-f4d196cb302b-fc15b544" class="text-white">In the ever-evolving world of quantum computing., the boundaries of what's possible are constantly being pushed. The recent revelation from a team of Chinese researchers, unveiling a technique that could potentially crack prevalent encryption methods, is a testament to this...</p>
-                            </a>
-                        </div>
-
-                    
-                    </div>
-                </div>
-
-                
-            </div>
-            
-        </section>
-
-        <div class="section is--news">
-            <div class="c--content w-container">
-                <div class="w-layout-grid grid--portfolio">
-                    <div id="w-node-ff112232-3912-f83e-661c-9dc8590b86df-f5762f35" class="header-w">
-                        <h2 class="o--h2--xl">The Scaled Podcast</h2>
-                        <div class="link-w large">
-                            <a href="https://www.youtube.com/@Zero2OneVC" class="link--block large black w-inline-block">
-                                <div class="link-arrow__inner">
-                                    <div class="link__p">Explore Our Podcast</div>
-                                    <div class="link__line-w">
-                                        <div class="link__line black"></div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div id="w-node-_8040808f-2f37-624a-7d90-92a864f48d06-f5762f35" class="home-news-collection w-dyn-list">
-                        <div role="list" class="feat-news-w w-dyn-items">
-                            <div role="listitem" class="collection-item-3 w-dyn-item">
-                                <a href="https://www.youtube.com/watch?v=6zF_41u29sY&t=1692s" class="home--featured-news-link w-inline-block">
-                                    <div class="links--inner">
-                                        <div class="links--top">
-                                            <div class="heading--2">Dec 22, 2023</div>
-                                            <h3 class="o--h5 articles">Scaled Pod: Avi Patel Founder of Nitrility; Revolutionizing the IP Marketplace Industry</h3>
-                                        </div>
-                                        <div class="links--bottom">
-                                            <div class="feat-news-img-w"><img src="1.png" loading="eager" alt="" sizes="(max-width: 479px) 87vw, (max-width: 767px) 81vw, (max-width: 991px) 39vw, 19vw"
-                                                    srcset="1.png 500w, 1.png 800w, 1.png 1080w, 1.png 1200w"
-                                                    class="image-4" /></div>
-                                            <div class="link-w">
-                                                <div class="link--block black">
-                                                    <div class="link__p">Watch Podcast</div>
-                                                    <div class="link__line-w">
-                                                        <div class="link__line black"></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div role="listitem" class="collection-item-3 w-dyn-item">
-                                <a href="https://www.youtube.com/watch?v=0kBJ5X2GBks&t=609s" class="home--featured-news-link w-inline-block">
-                                    <div class="links--inner">
-                                        <div class="links--top">
-                                            <div class="heading--2">Dec 29, 2023</div>
-                                            <h3 class="o--h5 articles">Scaled Pod: Andrew Gunderman & Toni Witt Founders of Genesis; Connecting the Midwestern Entreprenuership Community</h3>
-                                        </div>
-                                        <div class="links--bottom">
-                                            <div class="feat-news-img-w"><img src="2.png" loading="eager" alt="" sizes="(max-width: 479px) 87vw, (max-width: 767px) 81vw, (max-width: 991px) 39vw, 19vw"
-                                                    srcset="2.png 500w, 2.png 800w, 2.png 1080w, 2.png 1600w, 2.png 2000w, 2.png 2600w,2.png 3840w"
-                                                    class="image-4" /></div>
-                                            <div class="link-w">
-                                                <div class="link--block black">
-                                                    <div class="link__p">Watch Podcast</div>
-                                                    <div class="link__line-w">
-                                                        <div class="link__line black"></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <!-- <div role="listitem" class="collection-item-3 w-dyn-item">
-                                <a href="/writing/investing-in-assured-allies-disrupting-the-400bn-retirement-products-market" class="home--featured-news-link w-inline-block">
-                                    <div class="links--inner">
-                                        <div class="links--top">
-                                            <div class="heading--2">Jul 3, 2023</div>
-                                            <h3 class="o--h5 articles">Investing in Assured Allies - Disrupting the $400bn Retirement Products Market</h3>
-                                        </div>
-                                        <div class="links--bottom">
-                                            <div class="feat-news-img-w"><img src="https://uploads-ssl.webflow.com/635931b47ccaceb761762f45/6407316fa852f6659f81e532_1669717492422.jpg" loading="eager" alt="" sizes="(max-width: 479px) 87vw, (max-width: 767px) 81vw, (max-width: 991px) 39vw, 19vw"
-                                                    srcset="https://uploads-ssl.webflow.com/635931b47ccaceb761762f45/6407316fa852f6659f81e532_1669717492422-p-500.jpg 500w, https://uploads-ssl.webflow.com/635931b47ccaceb761762f45/6407316fa852f6659f81e532_1669717492422.jpg 730w"
-                                                    class="image-4" /></div>
-                                            <div class="link-w">
-                                                <div class="link--block black">
-                                                    <div class="link__p">Read Article</div>
-                                                    <div class="link__line-w">
-                                                        <div class="link__line black"></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div role="listitem" class="collection-item-3 w-dyn-item">
-                                <a href="/writing/landmark-trial-of-nhs-staff-by-kings-college-london-reveals-promising-digital-solution-to-improve-mental-health" class="home--featured-news-link w-inline-block">
-                                    <div class="links--inner">
-                                        <div class="links--top">
-                                            <div class="heading--2">Sep 6, 2022</div>
-                                            <h3 class="o--h5 articles">Landmark trial of NHS staff by King’s College London reveals promising digital solution to improve mental health</h3>
-                                        </div>
-                                        <div class="links--bottom">
-                                            <div class="feat-news-img-w"><img src="https://uploads-ssl.webflow.com/635931b47ccaceb761762f45/635931b47ccace5333762f8c_KOA%20Foundations%2C%20Science-based%20Wellbeing.jpg" loading="eager" alt="" sizes="(max-width: 479px) 87vw, (max-width: 767px) 81vw, (max-width: 991px) 39vw, 19vw"
-                                                    srcset="https://uploads-ssl.webflow.com/635931b47ccaceb761762f45/635931b47ccace5333762f8c_KOA%2520Foundations%252C%2520Science-based%2520Wellbeing-p-500.jpg 500w, https://uploads-ssl.webflow.com/635931b47ccaceb761762f45/635931b47ccace5333762f8c_KOA%2520Foundations%252C%2520Science-based%2520Wellbeing-p-800.jpg 800w, https://uploads-ssl.webflow.com/635931b47ccaceb761762f45/635931b47ccace5333762f8c_KOA%2520Foundations%252C%2520Science-based%2520Wellbeing-p-1080.jpg 1080w, https://uploads-ssl.webflow.com/635931b47ccaceb761762f45/635931b47ccace5333762f8c_KOA%20Foundations%2C%20Science-based%20Wellbeing.jpg 1200w"
-                                                    class="image-4" /></div>
-                                            <div class="link-w">
-                                                <div class="link--block black">
-                                                    <div class="link__p">Read Article</div>
-                                                    <div class="link__line-w">
-                                                        <div class="link__line black"></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div> -->
-                        </div>
-                    </div>
+        
+        <!-- University Partnerships FA24 -->
+        <section class="uni-partners-section">
+            <div class="uni-partners-circle" id="bigCirclePartnership">
+                <div class="uni-partners-circle-interior-content-container">
+                    <p class="uni-partners-circle-interior-text">
+                        Part of the Greater UIUC Entrepreneurship Ecosystem
+                    </p>
                 </div>
             </div>
-        </div>
+        </section>
 
-
-            <section class="section bg-black-02">
-                <div class="w-layout-blockcontainer container w-container">
+            <section class="section no-bottom-spacing" id="learn-more">
+                <div class="w-layout-blockcontainer container w-container" style="padding-bottom: 0px;">
+                    <div id="w-node-f65a071d-43b7-237f-b845-9d8077cd3d07-fc15b544" data-w-id="f65a071d-43b7-237f-b845-9d8077cd3d07" style="opacity:0" class="line"></div>
                     <div class="w-layout-grid grid-heading">
-                        <h2 id="w-node-_9f3ef0f0-e028-6c36-7405-90a944d3b84f-fc15b544" data-w-id="9f3ef0f0-e028-6c36-7405-90a944d3b84f" class="text-white">Zero2One VC&#x27;s <span class="text-transparent white">Incredible Teams</span></h2>
+                        <h2 id="w-node-_9f3ef0f0-e028-6c36-7405-90a944d3b84f-fc15b544" data-w-id="9f3ef0f0-e028-6c36-7405-90a944d3b84f" class="text-white">Join Zero2One VC</h2>
                         <div id="w-node-c11db3c4-a731-743c-6c35-7714758c934c-fc15b544" data-w-id="c11db3c4-a731-743c-6c35-7714758c934c" class="wrap-content">
-                            <p class="text-white">Do you want to learn more about venture capital and startups? Please apply to join one of our teams below, we are always looking to grow our team with passionate individuals.</p>
-                            <a class="button w-inline-block">
-                                <div>Apply Below</div>
-                            </a>
+                            <p class="text-white">Do you want to learn more about venture capital and startups? Please apply to join the Fall 2024 incubator cohort or one of our teams below. Learn more below.</p>
+                            <button class="application-window-button" style="margin: 0" onclick="window.location.href='https://forms.gle/3TTJpGFTTdARdr616'">Apply</button>
                         </div>
                     </div>
                     <div id="w-node-f65a071d-43b7-237f-b845-9d8077cd3d07-fc15b544" data-w-id="f65a071d-43b7-237f-b845-9d8077cd3d07" style="opacity:0" class="line"></div>
                     <div class="cms-services w-dyn-list">
                         <div role="list" class="cms-services---list w-dyn-items">
                             <div role="listitem" class="cms-services---item w-dyn-item">
-                                <a data-w-id="6bd9427f-1ac5-783c-a8a5-f3eb925e2b25" href="" class="services-link w-inline-block">
+                                <a data-w-id="6bd9427f-1ac5-783c-a8a5-f3eb925e2b25" class="services-link w-inline-block">
                                     <div class="w-layout-grid services-grid">
                                         <div id="w-node-_47433f6f-3d25-d9f6-fc1a-921c33414edb-fc15b544" class="services-wrap">
-                                            <!-- <div class="numbers-wrap">
-                                                <div class="number">(</div>
-                                                <div class="number">1</div>
-                                                <div class="number">)</div>
-                                            </div> -->
-                                            <h3 id="w-node-_07c24cd8-e4a5-15d7-e66a-30c68b27e79b-fc15b544">Investment Team</h3>
+                                            <h3 id="w-node-_07c24cd8-e4a5-15d7-e66a-30c68b27e79b-fc15b544">Fall 2024 Incubator</h3>
                                         </div>
-                                        <p id="w-node-_5a6db189-2dc4-b5a8-1c0e-f81fa01ed5d5-fc15b544">Our investment team at the venture capital fund is responsible for identifying and supporting promising startups. Leveraging their diverse expertise, market knowledge, and strategic insights, the team plays a pivotal role in driving the fund's mission to facilitate the success of visionary student entrepreneurs.</p>
+                                        <p id="w-node-_5a6db189-2dc4-b5a8-1c0e-f81fa01ed5d5-fc15b544">
+                                            Have an idea for a startup? Join our incubator this semester to develop it over the course of 10 weeks that lead to a pitch competition. 
+                                        </p>
                                     </div>
                                 </a>
                             </div>
                             <div role="listitem" class="cms-services---item w-dyn-item">
-                                <a data-w-id="6bd9427f-1ac5-783c-a8a5-f3eb925e2b25" href="https://docs.google.com/forms/d/e/1FAIpQLSc_JJUrdVpc3oMAID4aM5psS5NrH3YcRFhSHVwKdUPye5G2EQ/viewform?pli=1" class="services-link w-inline-block">
+                                <a data-w-id="6bd9427f-1ac5-783c-a8a5-f3eb925e2b25" class="services-link w-inline-block">
                                     <div class="w-layout-grid services-grid">
                                         <div id="w-node-_47433f6f-3d25-d9f6-fc1a-921c33414edb-fc15b544" class="services-wrap">
-                                            <!-- <div class="numbers-wrap">
-                                                <div class="number">(</div>
-                                                <div class="number">2</div>
-                                                <div class="number">)</div>
-                                            </div> -->
-                                            <h3 id="w-node-_07c24cd8-e4a5-15d7-e66a-30c68b27e79b-fc15b544">Research Team</h3>
+                                            <h3 id="w-node-_07c24cd8-e4a5-15d7-e66a-30c68b27e79b-fc15b544">Operations Team</h3>
                                         </div>
-                                        <p id="w-node-_5a6db189-2dc4-b5a8-1c0e-f81fa01ed5d5-fc15b544">The research team within our venture capital fund is tasked with conducting thorough analyses to identify investment opportunities. Through meticulous market research, trend analysis, and due diligence, the team contributes significantly to the fund's overarching goal of supporting and guiding innovative startups toward success as well as educating aspiring venture capatilists about the technicalities of multiple industries.</p>
+                                        <p id="w-node-_5a6db189-2dc4-b5a8-1c0e-f81fa01ed5d5-fc15b544">
+                                            The operations team develops the content and the structure of the incubator along with leading and executing it.
+                                        </p>
                                     </div>
                                 </a>
                             </div>
                             <div role="listitem" class="cms-services---item w-dyn-item">
-                                <a data-w-id="6bd9427f-1ac5-783c-a8a5-f3eb925e2b25" href="https://docs.google.com/forms/d/e/1FAIpQLSc_JJUrdVpc3oMAID4aM5psS5NrH3YcRFhSHVwKdUPye5G2EQ/viewform?pli=1" class="services-link w-inline-block">
+                                <a data-w-id="6bd9427f-1ac5-783c-a8a5-f3eb925e2b25" class="services-link w-inline-block">
                                     <div class="w-layout-grid services-grid">
                                         <div id="w-node-_47433f6f-3d25-d9f6-fc1a-921c33414edb-fc15b544" class="services-wrap">
-                                            <!-- <div class="numbers-wrap">
-                                                <div class="number">(</div>
-                                                <div class="number">3</div>
-                                                <div class="number">)</div>
-                                            </div> -->
-                                            <h3 id="w-node-_07c24cd8-e4a5-15d7-e66a-30c68b27e79b-fc15b544">Incubator Team - Taking Applications</h3>
+                                            <h3 id="w-node-_07c24cd8-e4a5-15d7-e66a-30c68b27e79b-fc15b544">Outreach Team</h3>
                                         </div>
-                                        <p id="w-node-_5a6db189-2dc4-b5a8-1c0e-f81fa01ed5d5-fc15b544">The incubator team at our venture capital firm is responsible for guiding and nurturing early-stage startups through our 9 week inubator. Through mentorship, strategic advice, and operational support, the team plays a crucial role in fostering the growth and development of the incubated companies, contributing to the overall success of our entrepreneurial ecosystem.</p>
+                                        <p id="w-node-_5a6db189-2dc4-b5a8-1c0e-f81fa01ed5d5-fc15b544">
+                                            The outreach team engages in forging partnerships with other organizations on and off campus.
+                                        </p>
                                     </div>
                                 </a>
                             </div>
                             <div role="listitem" class="cms-services---item w-dyn-item">
-                                <a data-w-id="6bd9427f-1ac5-783c-a8a5-f3eb925e2b25" href="https://docs.google.com/forms/d/e/1FAIpQLSc_JJUrdVpc3oMAID4aM5psS5NrH3YcRFhSHVwKdUPye5G2EQ/viewform?pli=1" class="services-link w-inline-block">
+                                <a data-w-id="6bd9427f-1ac5-783c-a8a5-f3eb925e2b25" class="services-link w-inline-block">
                                     <div class="w-layout-grid services-grid">
                                         <div id="w-node-_47433f6f-3d25-d9f6-fc1a-921c33414edb-fc15b544" class="services-wrap">
-                                            <!-- <div class="numbers-wrap">
-                                                <div class="number">(</div>
-                                                <div class="number">4</div>
-                                                <div class="number">)</div>
-                                            </div> -->
-                                            <h3 id="w-node-_07c24cd8-e4a5-15d7-e66a-30c68b27e79b-fc15b544">Content Team - Taking Applications</h3>
+                                            <h3 id="w-node-_07c24cd8-e4a5-15d7-e66a-30c68b27e79b-fc15b544">Marketing Team</h3>
                                         </div>
-                                        <p id="w-node-_5a6db189-2dc4-b5a8-1c0e-f81fa01ed5d5-fc15b544">The content team at our venture capital firm takes charge of video editing, YouTube podcast production, and weekly newsletter creation. Their responsibilities encompass creating engaging and informative multimedia content to share insights, updates, and valuable industry knowledge, contributing to our mission of fostering meaningful connections within the entrepreneurial community.</p>
+                                        <p id="w-node-_5a6db189-2dc4-b5a8-1c0e-f81fa01ed5d5-fc15b544">
+                                            The marketing team helps with creative planning and the execution of marketing-related materials for social media on Instagram, LinkedIn, etc.
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div role="listitem" class="cms-services---item w-dyn-item">
+                                <a data-w-id="6bd9427f-1ac5-783c-a8a5-f3eb925e2b25" class="services-link w-inline-block">
+                                    <div class="w-layout-grid services-grid">
+                                        <div id="w-node-_47433f6f-3d25-d9f6-fc1a-921c33414edb-fc15b544" class="services-wrap">
+                                            <h3 id="w-node-_07c24cd8-e4a5-15d7-e66a-30c68b27e79b-fc15b544">Social Team</h3>
+                                        </div>
+                                        <p id="w-node-_5a6db189-2dc4-b5a8-1c0e-f81fa01ed5d5-fc15b544">
+                                            The social team hosts community events to foster stronger connections within the cohort and E-board members.
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div role="listitem" class="cms-services---item w-dyn-item">
+                                <a data-w-id="6bd9427f-1ac5-783c-a8a5-f3eb925e2b25" class="services-link w-inline-block">
+                                    <div class="w-layout-grid services-grid">
+                                        <div id="w-node-_47433f6f-3d25-d9f6-fc1a-921c33414edb-fc15b544" class="services-wrap">
+                                            <h3 id="w-node-_07c24cd8-e4a5-15d7-e66a-30c68b27e79b-fc15b544">Software Development Team</h3>
+                                        </div>
+                                        <p id="w-node-_5a6db189-2dc4-b5a8-1c0e-f81fa01ed5d5-fc15b544">
+                                            The software development team builds various software projects for the growth of the incubator.
+                                        </p>
                                     </div>
                                 </a>
                             </div>
@@ -852,7 +794,7 @@
 
    
        
-            <section class="section bg-black-02">
+            <section class="section no-top-spacing no-bottom-spacing">
                 <div class="w-layout-blockcontainer container no-bottom-spacing w-container">
                     <div class="w-layout-grid grid-4">
                         <div class="div-block-5">
@@ -872,7 +814,12 @@
                                 <div class="text-1-25 text-white">Socials</div><a href="https://www.linkedin.com/company/42140218/admin/feed/posts/" class="link-footer">LinkedIn</a><a href="https://www.instagram.com/zero2one_vc/" class="link-footer">Instagram</a></div>
                             <div id="w-node-_4e67288e-8997-5d0f-24c6-36d7c0abedc1-8541aeb3" data-w-id="4e67288e-8997-5d0f-24c6-36d7c0abedc1"
                                 class="wrap-links">
-                                <div class="text-1-25 text-white">Navigation</div><a href="incubator.html" class="link-footer">Incubator</a><a href="team.html" class="link-footer">Team</a><a href="https://thedigitalpulse.substack.com/?utm_source=substack&utm_medium=web&utm_campaign=substack_profile" class="link-footer">NewsLetter</a><a href="index.html" class="link-footer">Research</a></div>
+                                <div class="text-1-25 text-white">Navigation</div>
+                                <a href="index.html" class="link-footer">Home</a>
+                                <a href="incubator.html" class="link-footer">Incubator</a>
+                                <a href="newsletter.html" class="link-footer">Newsletter</a>
+                                <a href="team.html" class="link-footer">Team</a>
+                            </div>
                             <div id="w-node-fe5d46d5-21bf-4407-9520-25106c2d67ee-8541aeb3"
                                 data-w-id="fe5d46d5-21bf-4407-9520-25106c2d67ee" class="wrap-links">
                                 <!-- <div class="text-1-25 text-white">Privacy</div><a href="#" class="link-footer">Cookies</a><a href="#" class="link-footer">Imprint</a><a href="#" class="link-footer">Privacy</a></div> -->
@@ -886,6 +833,46 @@
 
 
     </main>
+    <!--Mute Button Script-->
+    <script>
+        let video = document.getElementById("69af6757-33bb-20b6-9c2d-83753451b196-video");
+        let muteButton = document.getElementById("mute-button");
+        let muteButtonImg = document.getElementById("mute-button-img");
+        muteButton.onclick = function () { 
+            if (video.muted) {
+                muteButtonImg.src = "Speaker_Icon.svg"; 
+            } else {
+                muteButtonImg.src = "Mute_Icon.svg";
+            }
+            video.muted = !video.muted;
+        }
+    </script>
+    <!--UIUC FA24 Partnerships Circular Layout Script-->
+    <script>
+        const imgs = ['ec_logo.png', 'iventure_logo.jfif', 'scd_logo.jfif', 'tec_logo.png', 'founders_logo.png', 'entrecorps_logo.jfif'];
+        const links = ['https://www.ecillinois.org/', 'https://iventure.illinois.edu/', 'https://designcenter.illinois.edu/', 
+                        'https://tec.illinois.edu/', 'https://www.foundersillinois.org/', 'https://giesbusiness.illinois.edu/entrecorps'];
+        let bigCirclePartnership = document.getElementById("bigCirclePartnership");
+        let diameter = bigCirclePartnership.clientHeight;
+        let radius = diameter / 2;
+        let angleInterval = 2 * Math.PI / imgs.length;
+        let angleShift = angleInterval / imgs.length;
+        for (let i = 0; i < imgs.length; i++) {
+            let uniPartner = document.createElement("div");
+            uniPartner.className = "uni-partner";
+            uniPartner.style.top = `${radius + radius * Math.sin(i * angleInterval + angleShift)}px`;
+            uniPartner.style.left = `${radius + radius * Math.cos(i * angleInterval + angleShift)}px`;
+            let partnerLink = document.createElement("a"); 
+            partnerLink.href = links[i];
+            partnerLink.target = '_blank';
+            let logo = document.createElement("img");
+            logo.className = "uni-partner-logo";
+            logo.src = `partnership_logos/${imgs[i]}`;
+            partnerLink.appendChild(logo);
+            uniPartner.appendChild(partnerLink);
+            bigCirclePartnership.appendChild(uniPartner);
+        }
+    </script>
     <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=635931b47ccace7620762f33" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
     <script src="https://uploads-ssl.webflow.com/635931b47ccace7620762f33/js/webflow.f68a192f0.js" type="text/javascript"></script>
     <!-- Google Tag Manager (noscript) -->
@@ -894,60 +881,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
     <!-- Locomotive -->
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.6.1/dist/locomotive-scroll.min.js"></script>
-    <script>
-        var OldBrowser = /iPhone|iPad|Android|chrome.76|firefox.87|safari.12/i.test(navigator.userAgent);
-        if (!OldBrowser) {
-            const scroll = new LocomotiveScroll({
-                el: document.querySelector('[data-scroll-container]'),
-                smooth: true,
-                lerp: 0.1, // Linear Interpolation, 0 > 1 // Closer to 0 is smoother
-                multiplier: 1.3, // Effect Multiplier
-                reloadOnContextChange: true,
-                scrollFromAnywhere: true,
-                touchMultiplier: 2,
-                smoothMobile: 0,
-                smartphone: {
-                    smooth: !0,
-                    breakpoint: 767
-                },
-                tablet: {
-                    smooth: !0,
-                    breakpoint: 991
-                },
-            });
-            //accordion reset
-            document.querySelectorAll(".approach__tab-link,.filter-link,.reset_loco,.newsroom--tab-link,.adv--accordion-bttn").forEach((item) => {
-                item.onclick = () => {
-                    scroll.update();
-
-                    setTimeout(() => {
-                        scroll.update();
-                    }, 800);
-                }
-            })
-            //resume loco on modal close
-            document.querySelectorAll(".close-modal,.x-wrapper,.close-modal--advisors").forEach((item) => {
-                item.onclick = () => {
-                    scroll.start();
-
-                    setTimeout(() => {
-                        scroll.start();
-                    }, 1000);
-                }
-            })
-            //stop loco on modal open
-            document.querySelectorAll(".slider__controller,.brgr-wrapper,.slider__controller--advisors").forEach((item) => {
-                item.onclick = () => {
-                    scroll.stop();
-
-                    setTimeout(() => {
-                        scroll.stop();
-                    }, 1000);
-                }
-            })
-
-        }
-    </script>
     <!--Seamless Transition-->
     <script>
         let transitionTrigger = $(".transition-trigger");
@@ -2367,7 +2300,7 @@ a {
     top: 0%;
     bottom: auto;
     left: 0%;
-    right: 0%
+    right: 0%;
 }
 
 .wrap-navbar-button {
@@ -2478,6 +2411,10 @@ a {
 
 .section.no-bottom-spacing {
     padding-bottom: 0
+}
+
+.section.no-top-spacing {
+    padding-top: 0
 }
 
 .section.bg-video {
