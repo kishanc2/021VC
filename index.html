@@ -427,6 +427,47 @@
             filter: brightness(5);
         }
     </style>
+    <!-- News Scroller Styles -->
+    <style>
+        .news-scroller-container { 
+            width: 60%; 
+            height: 80px;
+            margin-left: 5%;
+            margin-right: 5%;
+            border: solid;
+            border-radius: 200px;
+            border-color: #5CE1E6;
+            overflow: hidden;
+        }
+
+        .news-scroller {
+            width: 1600px;
+            height: 100%;
+            animation-name: news-scroller;
+            animation-duration: 15s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes news-scroller {
+            0% { translate: 75% 0% }
+            100% { translate: -100% 0% }
+        }
+
+
+        .news-scroller-img {
+            height: 100%; 
+            padding: 0.5%;
+            border: transparent;
+            border-radius: 50%; 
+            vertical-align: middle;
+        }
+
+        .news-scroller-txt {
+            vertical-align: middle;
+            font-size: 150%;
+        }
+    </style>
 </head>
 
 <body class="body">
@@ -436,7 +477,21 @@
             <div class="pre__logo-w"><img src="transparent_vc_logo.png" loading="lazy" alt="Zero2One VC Logo Logo" class="logo--pre" /></div>
         </div>
     </div>
-    <div class="navbar shift"><a href="/" aria-current="page" class="home-link w-inline-block w--current"><img src="transparent_vc_logo.png" loading="lazy" alt="ZVC Logo" class="image-5"/></a>
+    <div class="navbar shift">
+        <a href="/" aria-current="page" class="home-link w-inline-block w--current"><img src="transparent_vc_logo.png" loading="lazy" alt="ZVC Logo" class="image-5"/></a>
+
+        <!-- News Scroller for Zite AI -->
+        <div class="news-scroller-container">
+            <a style="text-decoration: none; color: white;" href="https://lu.ma/ngklonbw" target="_blank">
+                <div class="news-scroller">
+                    <img class="news-scroller-img" src="joshua_love.jfif">
+                    <span class="news-scroller-txt">
+                        Keynote with Zite AI Joshua Love on Thursday September 5th 6:30PM @ Siebel Center of Design. LIMITED AVAILIBILITY, CLICK TO RSVP!
+                    </span>
+                </div>
+            </a>
+        </div>
+
         <div class="menu__inner-controls">
             <div class="nav--outer-links">
                 <a href="index.html" class="navbar-link shift w-inline-block">
