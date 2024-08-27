@@ -438,22 +438,23 @@
             border-radius: 200px;
             border-color: #5CE1E6;
             overflow: hidden;
+            position: relative;
         }
 
         .news-scroller {
-            width: 1600px;
+            width: max-content;
             height: 100%;
             animation-name: news-scroller;
             animation-duration: 15s;
+            animation-delay: 1.5s;
             animation-timing-function: linear;
             animation-iteration-count: infinite;
         }
 
         @keyframes news-scroller {
-            0% { translate: 75% 0% }
-            100% { translate: -100% 0% }
+            0% { transform: translateX(0%); }
+            100% { transform: translateX(-50%); }
         }
-
 
         .news-scroller-img {
             height: 100%; 
@@ -466,6 +467,7 @@
         .news-scroller-txt {
             vertical-align: middle;
             font-size: 150%;
+            padding-right: 50px;
         }
     </style>
 </head>
@@ -484,6 +486,11 @@
         <div class="news-scroller-container">
             <a style="text-decoration: none; color: white;" href="https://lu.ma/ngklonbw" target="_blank">
                 <div class="news-scroller">
+                    <img class="news-scroller-img" src="joshua_love.jfif">
+                    <span class="news-scroller-txt">
+                        Keynote with Zite AI Joshua Love on Thursday September 5th 6:30PM @ Siebel Center of Design. LIMITED AVAILIBILITY, CLICK TO RSVP!
+                    </span>
+                    <!-- Duplicated for seamless transition -->
                     <img class="news-scroller-img" src="joshua_love.jfif">
                     <span class="news-scroller-txt">
                         Keynote with Zite AI Joshua Love on Thursday September 5th 6:30PM @ Siebel Center of Design. LIMITED AVAILIBILITY, CLICK TO RSVP!
